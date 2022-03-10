@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request,jsonify
 from flask_cors import CORS,cross_origin
 import pickle
-
+import os
+import flask_monitoringdashboard as dashboard
 
 os.putenv('LANG', 'en_US.UTF-8')
 os.putenv('LC_ALL', 'en_US.UTF-8')
