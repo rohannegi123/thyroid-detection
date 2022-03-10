@@ -1,0 +1,126 @@
+<html>
+   <head>
+      <title>Search Page</title>
+      <style>
+         .ddown{
+         height: 30px;width:100px;border-radius: 5px;
+         text-align: center;outline:none;margin-bottom: 8px;
+         }
+         label{
+            margin-left: 15px;margin-right: 15px;
+         }
+      </style>
+   </head>
+   <body style="background:url(https://static01.nyt.com/images/2017/02/16/well/doctors-hospital-design/doctors-hospital-design-superJumbo.jpg);background-repeat: no-repeat;background-size: cover;"">
+      <img style="margin-left:12vw;width:80vw;height: 100vh;margin-top: -5vh;position: absolute;z-index: -1;opacity: 0.92;box-shadow: 5px 5px 2px 2px rgb(0,0,0,0.5);" src="https://blogger.googleusercontent.com/img/a/AVvXsEhp4vfZJTC5Whocg1DEHhRtaXFuypJj8CoLjiZDFuvEoxjvRbuSdjgMysoYmh5W5Ci1BDH-daRpf_MK4OowYzbAtZFAyMGP8ROCa49XxQTY6sGRQK2KWBj_j7dJHXKTw2o_WYvtQaSuxJ_qzW8-_gyY-ZJKdLYCm3TQ9ccaZ5-87Ppr3hm-j6BxPRAo=s320">
+      <div>
+         <!-- {% extends 'base.html' %}
+            {% block head %} -->
+         <!-- <title>Search Page</title> -->
+         <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+            -->
+         <!-- {% endblock %} -->
+         <!-- {% block body %} -->
+         <div class="content">
+            <h1 style="text-align: center">Predict the estimated risk on a patient's chance of obtaining thyroid disease .</h1>
+            <div class="form" style="width: 50vw;margin-top: 60px;margin-left: 21vw;">
+               <form action="/predict" method="POST" style="display:grid;">
+                <div>
+                  <label for="age">Age:
+                  <input class="ddown" type="number" name="age" id="age" placeholder="age"  step="any" required></label>
+                  <label for="Gender">
+                     Gender:
+                     <select name="Gender" id="Gender" class="ddown">
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                        required>
+                     </select>
+                  </label>
+                  <label for="on_thyroxine">
+                     On-thyroxine:
+                     <select name="on_thyroxine" id="on_thyroxine" class="ddown">
+                        <option value="0">False</option>
+                        <option value="1">True</option>
+                        required>
+                     </select>
+                  </label>
+                </div>
+                <div>
+                  <label for="on_antithyroid_medication">
+                     On Antithyroid Medication:
+                     <select name="on_antithyroid_medication" id="on_antithyroid_medication" class="ddown">
+                        <option value="0">False</option>
+                        <option value="1">True</option>
+                        required>
+                     </select>
+                  </label>
+                  <label for="I131_treatment">
+                     I131-treatment:
+                     <select name="I131_treatment" id="I131_treatment" class="ddown">
+                        <option value="0">False</option>
+                        <option value="1">True</option>
+                        required>
+                     </select>
+                  </label>
+                </div>
+                <div>
+                  <label for="query_hypothyroid">
+                     Query Hypothyroid:
+                     <select name="query_hypothyroid" id="query_hypothyroid" class="ddown">
+                        <option value="0">False</option>
+                        <option value="1">True</option>
+                        required>
+                     </select>
+                  </label>
+                  <label for="goitre">
+                     Goitre:
+                     <select class="ddown" name="goitre" id="goitre">
+                        <option value="0">False</option>
+                        <option value="1">True</option>
+                        required>
+                     </select>
+                  </label>
+    
+                  <label for="psych">
+                     Psych:
+                     <select class="ddown" name="psych" id="psych">
+                        <option value="0">False</option>
+                        <option value="1">True</option>
+                        required>
+                     </select>
+                  </label>
+                </div>
+                <div>
+                  <label for="TSH_measured">
+                     TSH-measured:
+                     <select class="ddown" name="TSH_measured" id="TSH_measured">
+                        <option value="0">False</option>
+                        <option value="1">True</option>
+                        required>
+                     </select>
+                     <input class="ddown" type="number" name="TSH" id="TSH" placeholder="TSH"  step="any" required>
+                  </label>
+                </div>
+                <div>
+                  <label for="T3_measured">
+                     T3-measured:
+                     <select class="ddown" name="T3_measured" id="T3_measured">
+                        <option value="0">False</option>
+                        <option value="1">True</option>
+                        required>
+                     </select>
+                  </label>
+                  <label for="T3">T3:
+                  <input class="ddown" type="number" name="T3" id="T3" placeholder="T3"  step="any" required></label>
+                  <label for="FTI">FTI:
+                  <input class="ddown" type="number" name="FTI" id="FTI" placeholder="FTI"  step="any" required></label>
+                </div>
+                  <br/>
+                  <input type="submit" value="Predict" style="width:200px;height:40px;margin-left: 10vw">
+               </form>
+            </div>
+         </div>
+         <!-- {% endblock %} -->
+      </div>
+   </body>
+</html>
